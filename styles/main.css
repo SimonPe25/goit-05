@@ -75,6 +75,10 @@ img {
     --border-color-solid: rgba(128, 128, 128, 0.247);
     --hover-icon: #AFB1B8;
     --hover-footer: rgba(255, 255, 255, 0.1);
+    --low-card: rgba(47, 48, 58, 0.8);
+    --blu-isopen: rgba(33, 150, 243, 0.9);
+    --close-btn: #fff;
+    --close-btn-x: #000;
 
 }
 
@@ -135,6 +139,7 @@ body {
 .nav__list {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .list {
@@ -145,8 +150,33 @@ body {
     margin-left: auto;
 }
 
-.list__link {
+.list__wrapper {
     margin-left: 50px;
+
+}
+
+.lowlinestudio::after {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 4px;
+    background-color: #2196F3;
+    left: 49px;
+    top: 48px;
+}
+
+.lowlinepartfolio::after {
+    position: absolute;
+    content: '';
+    width: 75px;
+    height: 4px;
+    background-color: #2196F3;
+    left: 149px;
+    top: 48px;
+}
+
+.list__link {
+
     color: var(--clr-txt-main);
     font-weight: 500;
     font-size: 14px;
@@ -216,12 +246,14 @@ body {
     color: var(--white-clr);
     width: 200px;
     height: 50px;
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .effect__button:hover {
     background-color: var(--white-background-clr);
     color: var(--btn-hover);
-    transition: 1s;
+
 }
 
 /* --------------Section №3 "description" -----------------*/
@@ -283,6 +315,33 @@ body {
     justify-content: space-between;
     width: 100%;
 }
+
+.qs-box__wrapperitem {
+    position: relative;
+}
+
+.question-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--low-card);
+    top: 225px;
+    height: 70px;
+    width: 370px;
+}
+
+.question-content>h3 {
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-clr);
+}
+
+
 
 /* ------------Section №4 "team" ------------------*/
 
@@ -356,6 +415,8 @@ address {
     display: block;
     margin-top: 6px;
     color: var(--foot-context);
+    transition: opacity 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cnt:hover {
@@ -391,14 +452,18 @@ address {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--clr-txt-main);
-    padding: 7px 20px 7px 20px
+    padding: 7px 20px 7px 20px;
+
+    transition: box-shadow 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .filter__btn:hover {
     background-color: var(--clr-txt-support);
     color: var(--light-background-clr);
-    transition: 0.3s;
     box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.12);
+
 }
 
 /* ------------gallery ----------------*/
@@ -415,11 +480,13 @@ address {
     max-width: 370px;
     position: relative;
     border-bottom: 1px solid var(--border-color-solid);
+    cursor: pointer;
 }
 
 .gallery__wrapper:hover {
-    cursor: pointer;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: box-shadow 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery__wrapper ::after {
@@ -440,6 +507,36 @@ address {
     width: 0.7px;
     height: 108px;
     background-color: rgba(128, 128, 128, 0.103);
+}
+
+.icon-block {
+    position: relative;
+    line-height: 0;
+}
+
+.hidden {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s linear;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--blu-isopen);
+    color: white;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.card:hover .hidden {
+    height: 100%;
+    padding: 63px 24px;
+}
+
+.hidden>h4 {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-clr);
 }
 
 .card__maintxt {
@@ -478,6 +575,8 @@ address {
 .icon-box__phone {
     display: flex;
     align-items: center;
+    transition: box-shadow 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-box__mail:hover .icon-mail {
@@ -518,7 +617,8 @@ address {
 
 .cards-hover {
     fill: none;
-    cursor: pointer;
+    transition: box-shadow 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cards-hover:hover {
@@ -554,6 +654,8 @@ address {
 .client-hover {
     fill: none;
     cursor: pointer;
+    transition: box-shadow 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-hover:hover {
@@ -588,9 +690,62 @@ address {
     cursor: pointer;
     fill: var(--hover-footer);
     margin-right: 10px;
+    transition: box-shadow 0.250ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-hover:hover {
     fill: var(--clr-txt-support);
     --hover-icon: var(--white-background-clr)
+}
+
+/* modal window*/
+.is-hidden {
+    visibility: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    width: 528px;
+    height: 581px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-right: 7px;
+    pointer-events: none;
+}
+
+.modal-header {
+    position: relative;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: 30px;
+}
+
+.svg-close {
+    pointer-events: all;
+}
+
+.svg-close:hover {
+    --close-btn: var(--clr-txt-support);
+    --close-btn-x: var(--light-background-clr);
 }
