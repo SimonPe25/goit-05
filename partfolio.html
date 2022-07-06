@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Партфолио</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <a class="header__logo logo">
+                <p class="logo__text">Web<span>Studio</span></p>
+            </a>
+            <nav class="header__wrap">
+                <ul class="nav__list list hover">
+                    <li class="list__wrapper"><a href="./index.html" title="studio" class="list__link">Студия</a></li>
+                    <li class="list__wrapper"><a href="./partfolio.html" title="partfolio"
+                            class="list__link">Портфолио</a></li>
+                    <li class="list__wrapper"><a href="#adress" class="list__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="nav__contact icon-box">
+                <div class="icon-box__mail">
+                    <svg class="icon-mail" width="16" height="12">
+                        <use xlink:href="sprite.svg#mail"></use>
+                    </svg>
+                    <li class="list__link mail">info@devstudio.com</li>
+                </div>
+                <div class="icon-box__phone">
+                    <svg class="icon-phone" width="10" height="16">
+                        <use xlink:href="sprite.svg#phone"></use>
+                    </svg>
+                    <li class="list__link link-phone">+38 096 111 11 11</li>
+                </div>
+
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="partfolio-section">
+            <div class="container">
+                <ul class="filter">
+                    <li><button class="filter__btn" type="button">Все</button></li>
+                    <li><button class="filter__btn" type="button">Веб-сайты</button></li>
+                    <li><button class="filter__btn" type="button">Приложения</button></li>
+                    <li><button class="filter__btn" type="button">Дизайн</button></li>
+                    <li><button class="filter__btn" type="button">Маркетинг</button></li>
+                </ul>
+                <ul class="gallery">
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/01_filter.jpg" width="370" height="294" alt="Технокряк-вебсайт">
+                        <h2 class="card__maintxt">Технокряк</h2>
+                        <p class="card__txt">Веб-сайт</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/02_filter.jpg" width="370" height="294"
+                            alt="Постер New Orlean vs Golden Star-Дизайн">
+                        <h2 class="card__maintxt">Постер New Orlean vs Golden Star</h2>
+                        <p class="card__txt">Дизайн</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/03_filter.jpg" width="370" height="294"
+                            alt="Ресторан Seafood-Приложение" class="hide">
+                        <h2 class="card__maintxt">Ресторан Seafood</h2>
+                        <p class="card__txt">Приложение</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/04_filter.jpg" width="370" height="294" alt="Проект Prime-Маркетинг">
+                        <h2 class="card__maintxt">Проект Prime</h2>
+                        <p class="card__txt">Маркетинг</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/05_filter.jpg" width="370" height="294" alt="Проект Boxes-Приложение">
+                        <h2 class="card__maintxt">Проект Boxes</h2>
+                        <p class="card__txt">Приложение</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/06_filter.jpg" width="370" height="294"
+                            alt="Inspiration has no Borders-Веб-сайт">
+                        <h2 class="card__maintxt">Inspiration has no Borders</h2>
+                        <p class="card__txt">Веб-сайт</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/07_filter.jpg" width="370" height="294"
+                            alt="Издание Limited Edition-Дизайн">
+                        <h2 class="card__maintxt">Издание Limited Edition</h2>
+                        <p class="card__txt">Дизайн</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/08_filter.jpg" width="370" height="294" alt="Проект LAB-Маркетинг">
+                        <h2 class="card__maintxt">Проект LAB</h2>
+                        <p class="card__txt">Маркетинг</p>
+                    </li>
+                    <li class="gallery__wrapper card">
+                        <img src="./images/filter/09_filter.jpg" width="370" height="294"
+                            alt="Growing Business-Приложение">
+                        <h2 class="card__maintxt">Growing Business</h2>
+                        <p class="card__txt">Приложение</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footerwrapper">
+            <div>
+                <a class="header__logo logo">
+                    <p class="logo__text flogo">Web<span>Studio</span></p>
+                </a>
+                <address class="footer__content" id="adress">
+                    <a href="https://goo.gl/maps/DUdp3G9AtDytxbrq9" class="address" target="_blank">г. Киев, пр-т Леси
+                        Украинки,
+                        26</a>
+                    <a href="#" class="address cnt">info@example.com</a>
+                    <a href="#" class="address cnt">+38 099 111 11 11</a>
+                </address>
+            </div>
+            <div class="foot-box">
+                <h3 class="txtfooter">Присоединяйтесь</h3>
+                <div class="foot-wrapper">
+                    <svg width="44" height="44" class="foot-hover">
+                        <use xlink:href="sprite.svg#ellipse"></use>
+                    </svg>
+                    <svg width="44" height="44" class="foot-hover">
+                        <use xlink:href="sprite.svg#twitter"></use>
+                    </svg>
+                    <svg width="44" height="44" class="foot-hover">
+                        <use xlink:href="sprite.svg#fasebook"></use>
+                    </svg>
+                    <svg width="44" height="44" class="foot-hover">
+                        <use xlink:href="sprite.svg#linkedin"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
